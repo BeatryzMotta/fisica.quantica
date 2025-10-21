@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CORPO */
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(135deg, #100366, #050875, #070231);
+  background-size: 400% 400%;
+  overflow-x: hidden;
+  padding-top: 120px; /* mais espaço para título + subtítulo */
+}
+
+/* TÍTULO */
+.titulo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px 25px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  z-index: 10;
+  letter-spacing: 1px;
+}
+
+/* SUBTÍTULO */
+.subtitulo {
+  position: absolute;
+  top: 90px; /* mais para baixo */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 20px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.4); /* fundo semitransparente */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  z-index: 10;
+}
+
+/* PAINÉIS */
+.panel {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.8s ease-in-out;
+  border-radius: 20px;
+  margin: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-position: center;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+  z-index: 1;
+  border-radius: 20px;
+}
+
+/* TÍTULOS DOS PAINÉIS */
+.panel h2 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 12px;
+  backdrop-filter: blur(4px);
+}
+
+/* TEXTO DOS PAINÉIS */
+.panel p {
+  z-index: 2;
+  opacity: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 80%;
+  margin-bottom: 25px;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 18px;
+  border-radius: 12px;
+  color: #f1f1f1;
+}
+
+/* PAINEL ATIVO */
+.panel.active {
+  flex: 3;
+  transform: scale(1.03);
+  background-image: none;
+  background: radial-gradient(circle at top left, #673ab7, #3f51b5, #00bcd4);
+}
+
+.panel.active p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HOVER */
+.panel:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+/* PANEL INFO */
+.panel-info {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.panel-info img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.panel-info p {
+  margin-bottom: 10px;
+}
+
+.panel-info a {
+  color: #ff0062;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.panel-info a:hover {
+  text-decoration: underline;
+}
+
+/* IMAGENS DOS FÍSICOS */
+.um { background-image: url("../img/isaac.jpg"); }
+.dois { background-image: url("../img/einstein.jpg"); }
+.tres { background-image: url("../img/maria.webp"); }
+.quatro { background-image: url("../img/galileu.webp"); }
+.cinco { background-image: url("../img/max-planck.webp"); }
+.seis { background-image: url("../img/niels bohr.jpg"); }
+.sete { background-image: url("../img/Werner_Heisenberg.jpg"); }
+.oito { background-image: url("../img/Erwin_Schrödinger.jpg"); }
+.nove { background-image: url("../img/Paul_Dirac.jpg"); }
+.dez { background-image: url("../img/Max_Born.jpg"); }
+.onze { background-image: url("../img/Stephen_Hawking.StarChild.jpg"); }
+
+/* BOTÃO VOLTAR (mesmo estilo antigo) */
+.voltar {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+  background: linear-gradient(135deg, #ffb61a, #f50555);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  width: 80px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 11;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.voltar:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg,  #f50555, #ffb61a);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.4);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 876px) {
+  body {
+    flex-direction: column;
+    padding-top: 140px;
+  }
+
+  .panel {
+    min-height: 60vh;
+  }
+
+  .panel.active {
+    min-height: 80vh;
+  }
+
+  .panel h2 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .titulo {
+    font-size: 1.7rem;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+    top: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel h2 {
+    font-size: 1rem;
+  }
+
+  .titulo {
+    font-size: 1.3rem;
+  }
+
+  .subtitulo {
+    font-size: 0.9rem;
+    top: 80px;
+  }
+
+  .panel-info img {
+    width: 140px;
+    height: 140px;
+  }
+}
