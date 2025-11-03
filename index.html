@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Física Quântica</title>
+  <link rel="stylesheet" href="./assend/style.css">
+
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ======= PLANETAS - EFEITO ESTILO GITHUB ======= */
+    .planet {
+      opacity: 0;
+      transform: translateY(40px) scale(0.9);
+      animation: planetEntry 1.2s ease-out forwards, float 4s ease-in-out infinite;
+    }
+
+    .planet:nth-child(1) { animation-delay: 0.2s, 2s; }
+    .planet:nth-child(2) { animation-delay: 0.4s, 2.2s; }
+    .planet:nth-child(3) { animation-delay: 0.6s, 2.4s; }
+    .planet:nth-child(4) { animation-delay: 0.8s, 2.6s; }
+    .planet:nth-child(5) { animation-delay: 1.0s, 2.8s; }
+    .planet:nth-child(6) { animation-delay: 1.2s, 3.0s; }
+    .planet:nth-child(7) { animation-delay: 1.4s, 3.2s; }
+    .planet:nth-child(8) { animation-delay: 1.6s, 3.4s; }
+
+    @keyframes planetEntry {
+      0% { opacity: 0; transform: translateY(40px) scale(0.9); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ======= RODAPÉ ======= */
+    footer {
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    /* ======= ÍCONE GITHUB ======= */
+    .github-link {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 3em;
+      color: #ffffff;
+    }
+
+    .github-link:hover {
+      color: #ce0bb7d7;
+      transform: scale(1.1);
+      text-shadow: 0 0 10px #ff00aebd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pagina">
+    <header class="inicio">
+      <canvas class="estrelacanvas"></canvas>
+
+      <h1 class="titulo1">Física Quântica</h1>
+      <h2 class="titulo2">Explorando o Mundo Invisível</h2>
+
+      <img class="atomo" src="./img/atomo tranparente.gif" width="400" height="500" alt="Átomo animado">
+
+      <p class="introducao">
+        Você está pronto para descobrir um mundo mágico, invisível e cheio de mistérios?
+        Vamos aprender Física Quântica!
+      </p>
+
+      <div class="planetas">
+        <img class="planet" src="./img/imagem 4.png" alt="">
+        <img class="planet" src="./img/imagem 2.png" alt="">
+        <img class="planet" src="./img/imagem 5.png" alt="Terra">
+        <img class="planet" src="./img/imagem 6.png" alt="">
+        <img class="planet" src="./img/imagem 7.png" alt="Saturno">
+        <img class="planet" src="./img/imagem 3.png" alt="Netuno">
+        <img class="planet" src="./img/imagem 1.png" alt="Terra">
+        <img class="planet" src="./img/imagem 8.png" alt="">
+      </div>
+    </header>
+
+    <main class="background">
+      <div class="retangulos">
+        <a href="./o_que_e.html" class="box">
+          <h2>O que é Física Quântica</h2>
+          <img src="./img/atomo quadro.png" width="200" height="200" alt="átomo explicando e um quadro">
+        </a>
+
+        <a href="./fisico.html" class="box">
+          <h2>Físicos Importantes</h2>
+          <img src="./img/cientista.png" width="170" height="185" alt="menina cientista">
+        </a>
+
+        <a href="./jogo.html" class="box">
+          <h2>Quiz Quântico</h2>
+          <img src="./img/menino escrita.png" width="210" height="230" alt="menino estudando">
+        </a>
+      </div>
+    </main>
+
+    <!-- ======= RODAPÉ ======= -->
+    <footer>
+      <p>Desenvolvido por <strong>Beatryz Oliveira Motta</strong> 💫</p>
+
+      <div class="contato">
+        (21) 99300-8032
+        bya06motta@gmail.com
+      </div>
+
+      <a href="https://github.com/BeatryzMotta" target="_blank" class="github-link" title="Meu GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </footer>
+  </div>
+
+  <script src="./assend/index.js"></script>
+</body>
+</html>
