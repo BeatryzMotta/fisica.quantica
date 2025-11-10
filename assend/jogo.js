@@ -106,25 +106,33 @@ function showCard(title, video, text, correct) {
   card.style.visibility = 'visible';
 }
 
+// === NOVA FUNÇÃO: para parar o vídeo ===
+function stopVideo() {
+  cardVideo.src = ""; // Remove o vídeo do iframe (YouTube para o som)
+}
+
 function nextQuestion() {
   removeConfetti();
+  stopVideo(); // ⛔ Para o som
   card.style.visibility = 'hidden';
   current++;
   loadQuestion();
 }
 
 function retry() {
+  stopVideo(); // ⛔ Para o som
   card.style.visibility = 'hidden';
   loadQuestion();
 }
 
 function finishGame() {
   removeConfetti();
+  stopVideo(); // ⛔ Para o som
   card.style.visibility = 'hidden';
   alert('🎉 Parabéns! Você completou todas as perguntas!');
 }
 
-// Confete
+// === CONFETE ===
 function createConfetti() {
   removeConfetti();
   for (let side of ["left", "right"]) {
@@ -149,4 +157,3 @@ function removeConfetti() {
 }
 
 loadQuestion();
-
