@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Quântico</title>
+  <link rel="stylesheet" href="./assend/jogo.css">
+</head>
+
+<body>
+  <header>
+    <h1>🧠 Quiz Quântico </h1>
+    <button class="home-btn" onclick="window.location.href='index.html'">Voltar</button>
+  </header>
+
+  <main>
+    <div class="quiz-box" id="quiz"></div>
+  </main>
+
+  <div class="card-overlay" id="card">
+    <div class="card" id="card-box">
+      <h2 id="card-title"></h2>
+      <iframe id="card-video" allowfullscreen></iframe>
+      <p id="card-text"></p>
+      <div id="card-buttons"></div>
+    </div>
+  </div>
+
+  <script src="./assend/jogo.js"></script>
+</body>
+</html>
