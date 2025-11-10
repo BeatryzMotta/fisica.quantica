@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que é Física Quântica</title>
+  <link rel="stylesheet" href="./assend/o_que_e.css">
+</head>
+<body>
+  <div class="pagina">
+    <header class="cabecalho">
+      <a href="index.html" class="voltar-topo">Voltar</a>
+      <h1>O que é Física Quântica?</h1>
+      <p class="subtopo">
+      A Física Quântica é uma das áreas mais fascinantes e estranhas da ciência.
+      </p>
+    </header>
+
+    <!-- bloco azul com imagem dentro -->
+    <section class="conteudo azul" data-aos="fade-up">
+      <div class="texto">
+        <p>
+          Ela descreve o comportamento da matéria e da energia em uma escala muito,
+          muito pequena, a dos átomos e das partículas subatômicas. É como se as regras
+          do mundo que conhecemos, onde uma bola só pode estar em um lugar por vez e as coisas
+          têm tamanho e forma definidos, não se aplicassem mais.
+        </p>
+        <p>
+          Pense nas coisas que vemos todos os dias, como uma bola de futebol: ela só pode estar
+          em um lugar de cada vez, né? A gente sabe onde ela está e para onde vai. Isso é a
+          física clássica, as regras normais do nosso mundo. Mas, no mundo da Física Quântica,
+          as coisas são muito, muito pequenas, como os pedacinhos que formam tudo o que existe.
+          Nesse mundo, as regras mudam!
+        </p>
+      </div>
+      <div class="imagem" data-aos="zoom-in">
+        <img src="./img/atomo foto.jpg" alt="Física Quântica">
+        <h6 style="color: white;">
+          imagem: https://www.blogs.unicamp.br/ciencianerd/2023/01/25/o-que-e-fisica-quantica/
+        </h6>
+      </div>
+    </section>
+
+    <!-- bloco verde -->
+    <section class="conteudo azul" data-aos="fade-up">
+      <h2>As Três Regras Mágicas</h2>
+      <div class="texto">
+        <ul>
+          <b>Existem três regras muito especiais que fazem esse universo quântico ser tão legal e estranho:</b>
+
+          <li>
+            <b>Tudo vem em pacotinhos:</b> Na Física Quântica, a energia não é como um rio contínuo, mas sim como gotinhas 
+            de água. A luz, por exemplo, é feita de pacotinhos de energia! Um cientista chamado Max Planck descobriu isso, e 
+            o famoso Albert Einstein usou essa ideia para explicar como a luz consegue "chutar" elétrons (cargas elétricas negativas) para fora das coisas.
+          </li>
+
+          <li>
+            <b>As partículas usam disfarces:</b> Imagine que um elétron pode ser uma bolinha de gude e, ao mesmo tempo, uma onda na água.
+            Como um super-herói que tem duas formas! Louis de Broglie pensou nessa ideia maluca e os cientistas provaram que ele estava certo!
+          </li>
+
+          <li>
+            <b>Não dá para saber tudo ao mesmo tempo:</b> Um cientista chamado Werner Heisenberg descobriu que
+            é impossível saber exatamente onde um elétron está e qual é a sua velocidade ao mesmo tempo.
+          </li>
+        </ul>
+         <div class="video">
+          <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/eA1E2HGdbKg?start=1"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="no-referrer-when-downgrade"
+  allowfullscreen>
+</iframe>
+
+
+
+      </div>
+      </div>
+
+
+
+
+
+    </section>
+
+    <!-- bloco verde-água -->
+    <section class="conteudo azul" data-aos="fade-up">
+      <h2>Por que a Física Quântica é a Nossa Amiga Mágica?</h2>
+      <div class="texto">
+        <ul>
+          <b>Apesar de parecer um mundo de faz de conta, a Física Quântica é muito real e está em todos os lugares!</b>
+          <li><b>Computadores:</b> Usam as regras da Física Quântica para funcionar!</li>
+          <li><b>Lasers:</b> São feitos com a ajuda da Física Quântica.</li>
+          <li><b>Telas:</b> A tela do seu celular usa a Física Quântica para criar as imagens!</li>
+        </ul>
+        <p>
+          A Física Quântica é a aventura mais legal da ciência — e os cientistas ainda estão descobrindo mais sobre ela!
+        </p>
+      </div>
+      <img src="./img/computador quantu.webp" alt="Computador Quântico" class="imagem">
+      <h6 style="color: white;">imagem: https://comparaplano.com.br/computador-quantico/</h6>
+    </section>
+
+    <a href="index.html" class="voltar-baixo">Voltar</a>
+
+    <!-- Botão flutuante -->
+    <button id="scrollBtn" class="scroll-btn">⬇</button>
+  </div>
+
+  <script>
+    // animação de entrada
+    window.addEventListener("load", () => {
+      document.body.classList.add("mostrar");
+    });
+
+    // botão de rolagem
+    const btn = document.getElementById("scrollBtn");
+    btn.addEventListener("click", () => {
+      if (window.scrollY < window.innerHeight / 2) {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+
+    // troca seta para cima/baixo conforme posição
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > window.innerHeight / 2) {
+        btn.textContent = "⬆";
+      } else {
+        btn.textContent = "⬇";
+      }
+    });
+  </script>
+</body>
+</html>
