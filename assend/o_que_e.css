@@ -33,10 +33,11 @@ body.mostrar {
   position: absolute;
   left: 20px;
   top: 25px;
-  background: #2503949b;
+  background:linear-gradient(135deg, #420cad, #f50555);
   color: white;
   text-decoration: none;
   font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 10px 16px;
   border-radius: 25px;
@@ -44,9 +45,10 @@ body.mostrar {
 }
 
 .voltar-topo:hover {
-  background: #250394d5;
-  transform: scale(1.05);
+  background:linear-gradient(135deg,  #f50555, #5211e0);
+  transform: scale(1.1);
   font-size: 20px;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.4);
 }
 
 .subtopo {
@@ -77,12 +79,13 @@ body.mostrar {
 .voltar-baixo {
   display: block;
   text-align: center;
-  background: #250394dc;
+  background:linear-gradient(135deg, #420cad, #f50555);
   color: white;
   text-decoration: none;
   width: fit-content;
   margin: 50px auto;
   font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 12px 25px;
   border-radius: 25px;
@@ -90,10 +93,11 @@ body.mostrar {
 }
 
 .voltar-baixo:hover {
-  background: #250394;
+  background:linear-gradient(135deg,  #f50555, #5211e0);
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.4);
 }
 
 .scroll-btn {
@@ -130,7 +134,7 @@ body.mostrar {
 
 /* CABEÇALHO */
 .cabecalho {
-  background: linear-gradient(90deg, #d8087ab7, #0c00eda2);
+  background: linear-gradient(90deg, #0c00eda2, #d8087ab7 );
   padding: 40px 20px;
   text-align: center;
 }
