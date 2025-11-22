@@ -1,21 +1,15 @@
     /* === Estilo geral === */
     body {
       margin: 0;
-      background: linear-gradient(135deg, #041646, #1721ae, #4a3df5);
+      background:#0e47bada;
       background-size: 400% 400%;
       color: #0f172a;
       overflow-x: hidden;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
    }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
     header {
-      background:linear-gradient(90deg,#0c00eda2, #d8087ab7 );
+      background:#000000da;
       color: white;
       padding: 16px;
       display: flex;
@@ -32,23 +26,24 @@
     }
 
     .home-btn {
-      background:  #250394dc;
+      background:linear-gradient(135deg, #420cad, #f50555);
       color: #ffffff;
       border: none;
       padding: 10px 14px;
-      border-radius: 10px;
+      border-radius: 25px;
       cursor: pointer;
       font-size: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       transition: transform 0.3s, background 0.3s;
     }
 
     .home-btn:hover {
-      background: #250394;
+      background:linear-gradient(135deg,  #f50555, #5211e0);
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      transform: scale(1.05);
+      transform: scale(1.1);
       font-size: 15px;
-      box-shadow: 0 10px 10px #2f1bca96 ;
+      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.4);
     }
 
     /* === Área principal === */
@@ -185,5 +180,6 @@
         transform: translate(var(--x), var(--y)) rotate(720deg);
         opacity: 0;
       }
+
 
     }
